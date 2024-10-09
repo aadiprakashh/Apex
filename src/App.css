@@ -1,0 +1,570 @@
+:root {
+    --whi: white;
+    --bla: #020d19;
+    --nav: navy;
+    --gol: gold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Mukta", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.app {
+    width: 100dvw;
+}
+
+
+#home {
+    width: 100%;
+    height: 80dvh;
+    /* background: linear-gradient(to bottom, var(--bla) 0%, transparent), url("./assets/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    overflow: hidden;
+}
+
+.menubar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Change to space-between for better alignment */
+    padding: 20px;
+    /* Add padding for better spacing */
+    background-color: #fff;
+    /* Optional: Add a background color to the menubar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for depth */
+}
+
+.logo {
+    width: 150px;
+    /* Set the width of the logo */
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+    /* Space between menu items */
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Link styles */
+.menu a {
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1.17rem;
+    /* Font size for menu items */
+    color: #333;
+    /* Default color for links */
+    position: relative;
+    /* Position for the border effect */
+    /* padding: 10px 0; */
+    /* Add vertical padding for better click area */
+}
+
+/* Active link style */
+.menu a.active {
+    border-bottom: 2px solid red;
+    /* Underline for active link */
+    color: red;
+    /* Change color for active link (optional) */
+}
+
+/* Hover effect */
+.menu a:hover {
+    color: red;
+    /* Change color on hover */
+    border-bottom: 2px solid red;
+    /* Add underline on hover */
+}
+
+/* Search input styles */
+.menubar .search {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    width: 300px;
+    /* Width of the search input */
+    background-color: transparent;
+    /* Background color of the input */
+    border: 1px solid #333;
+    /* Border color */
+}
+
+/* Placeholder styles */
+#menubar input::placeholder {
+    padding-left: 10px;
+    /* Add padding to the left of placeholder text */
+}
+
+/* Cart styles */
+.cart {
+    width: 200px;
+    /* Width of the cart section */
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-evenly;
+    /* Space items evenly */
+}
+
+.bi {
+    color: #333;
+    font-size: 2rem;
+}
+
+a {
+    color: black;
+}
+
+.number {
+    color: white;
+    /* Background for the number */
+    position: relative;
+    /* Relative positioning */
+    top: -30px;
+    /* Move number above the cart icon */
+    left: 35%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Adjust centering */
+    background-color: red;
+    /* Background color for notification */
+    border-radius: 50%;
+    /* Circle shape */
+    padding: 1px 6px;
+    /* Padding for better appearance */
+    font-weight: 800;
+    /* Bold font */
+    display: flex;
+    /* Flexbox for centering */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+.intro {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.intro .sub-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* gap: 10px; */
+}
+
+
+.sub-intro h2 {
+    color: #333;
+    font-family: "DM Serif Text", serif;
+    font-size: 3.5rem;
+}
+
+.sub-intro p {
+    color: rgb(154, 154, 154);
+    width: 60%;
+    font-size: 1.15rem;
+}
+
+.sub-intro a {
+    text-decoration: none;
+}
+
+#btn1 {
+    padding: 10px 25px;
+    background-color: red;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+}
+
+#btn1:hover {
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+}
+
+.hero-img {
+    position: relative;
+    top: 25px;
+    right: 120px;
+    border-radius: 20px;
+}
+
+
+.category {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+
+
+
+
+#shop {
+    /* background: var(--bla); */
+    width: 100%;
+    height: auto;
+}
+
+
+aside {
+    width: 180px;
+    max-width: 250px;
+    height: auto;
+    padding: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 1px solid;
+    /* background-color: aliceblue; */
+    /* color: white; */
+}
+
+aside h4 {
+    width: 100%;
+    text-align: center;
+}
+
+#box #range {
+    width: 100px;
+}
+
+#box p {
+    border-bottom: 1px solid;
+    padding: 5px;
+    font-weight: 600;
+}
+
+#box input,
+span {
+    position: relative;
+    top: 10px;
+    left: 5%;
+    padding: 2%;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+#shop-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#submenu {
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#submenu a {
+    text-decoration: none;
+    padding: 10px;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+}
+
+#submenu a.active {
+    border: 2px solid red;
+    color: red;
+}
+
+#submenu a:hover {
+    background-color: red;
+    /* border-radius: 0 10px; */
+    color: #eee;
+    transition: all 0.4s ease;
+}
+
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+#list {
+    box-shadow: 0px 0px 6px #00000078, 0px 0px 6px #ffffff88;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+#list span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    left: 0px;
+}
+
+#list span img {
+    width: 15%;
+    aspect-ratio: 2/2;
+    cursor: pointer;
+}
+#list h4{
+    color: #333;
+}
+#list h5 {
+    font-weight: 800;
+    color: green;
+}
+
+#list #image {
+    width: 100%;
+    aspect-ratio: 3/3;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+
+}
+
+#list p {
+    font-size: small;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+#list #view-btn {
+    background-color: red;
+    padding: 10px;
+    border: none;
+    border-radius: 0 10px;
+    font-weight: 600;
+}
+#buy-btn{
+    border: 1px solid red;
+    background: transparent;
+}
+#buy-btn > a{
+    color: red;
+}
+#view-btn > a{
+    color: white;
+}
+
+#list a {
+    text-decoration: none;
+}
+
+.category{
+    width: 100%;
+    height: 80dvh;
+}
+
+.category-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.category-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Prevents overflow on hover */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures aspect ratio is maintained */
+    transition: transform 0.3s;
+}
+
+.category-card:hover img {
+    transform: scale(1.05); /* Zoom effect on image */
+}
+
+.category-card h2 {
+    margin: 20px 0 10px;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+.category-card p {
+    margin: 0 20px 20px;
+    color: #7f8c8d; /* Lighter text for description */
+}
+
+
+/* Minimalist styles for Buy page with modern design */
+#buy {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #buy .h1 {
+    font-size: 3rem;
+    color: #222;
+    padding:10px;
+  }
+  
+  #buy h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  #buy h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  #buy .checkout {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .checkout input{
+    background-color: transparent;
+  }
+  #buy input[type="text"],
+  #buy input[type="number"],
+  #buy input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  #buy input:focus {
+    border-color: red;
+    outline: none;
+  }
+
+#buy #method{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+  #buy .place {
+    padding: 15px;
+    background-color: red;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #eee;
+  }
+  .place h1{
+    color: white;
+  }
+
+  #buy .tot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  #buy #pay  {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  /* Styling the subtotal, discount, and total amounts */
+  #buy .tot:last-child {
+    font-weight: bold;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  #buy .tot div {
+    font-size: 1.5rem;
+  }
+  
+  #buy #total {
+    color: red;
+  }
+  
+/* buy */
+
+
+
+
+
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ecf0f1; /* Change color on hover */
+}
