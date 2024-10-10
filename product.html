@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page - Super Soft Cotton T-Shirt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="product-container" id="product">
+      <div class="row d-flex align-items-center gap-3">
+        <div class="product-images col-md-5 d-flex align-items-center gap-4">
+          <!-- Product Images Section -->
+          <div class="product-images-overview d-flex flex-column gap-4">
+            <img src="/src/assets/front-view.jpg" alt="Front View" />
+            <img src="/src/assets/back-view.jpg" alt="Back View" />
+            <img src="/src/assets/side-view.jpg" alt="Side View" />
+            <img src="/src/assets/fabric-closeup.jpg" alt="Fabric Closeup" />
+          </div>
+          <img
+            class="product-image"
+            src="/src/assets/front-view.jpg"
+            alt="Main Product Image"
+          />
+        </div>
+
+        <div class="product-description col-md-6">
+          <!-- Price and Rating -->
+          <h1>Super Soft Cotton T-Shirt</h1>
+          <div class="price">
+            $29.99
+            <span class="old-price">$39.99</span>
+          </div>
+          <div class="rating">⭐⭐⭐⭐☆ (4.5/5) - 234 Reviews</div>
+
+          <!-- Description -->
+          <div class="description">
+            <h2>Description:</h2>
+            <p>
+              Stay cool and comfortable all day long with our 100% organic
+              cotton t-shirt. Featuring a breathable, lightweight fabric that’s
+              perfect for daily wear.
+            </p>
+            <ul>
+              <li>
+                <strong>Material:</strong> Made from 100% Organic Cotton for a
+                soft and breathable feel.
+              </li>
+              <li>
+                <strong>Fit:</strong> Regular fit with a comfortable round
+                neckline, perfect for everyday wear.
+              </li>
+              <li>
+                <strong>Available Sizes:</strong> S, M, L, XL, XXL - Find your
+                perfect fit!
+              </li>
+              <li>
+                <strong>Colors:</strong> Available in four stylish colors:
+                Black, White, Navy, and Grey.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Options (Size, Color, Quantity) -->
+          <div class="options">
+            <label for="color">Color:</label>
+            <select id="color">
+              <option>Black</option>
+              <option>White</option>
+              <option>Navy</option>
+              <option>Grey</option>
+            </select>
+
+            <label for="size">Size:</label>
+            <select id="size">
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+              <option>Extra Large</option>
+              <option>XXL</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <select id="quantity">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="button-group d-flex gap-3">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy-now">Buy Now</button>
+            <!-- <button class="wishlist">Add to Wishlist</button> -->
+          </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews ">
+          <h3 class="h3">Customer Reviews (234):</h3>
+          <div class="d-flex gap-3">
+            <div class="review-item">
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+              <h4>Amazing Quality!</h4>
+              <p>
+                "This t-shirt is incredibly soft and fits perfectly. I’ve
+                already ordered two more colors!" - John D.
+              </p>
+            </div>
+            <div class="review-item">
+              <div class="rating">⭐⭐⭐⭐</div>
+              <h4>Great, but runs small</h4>
+              <p>
+                "Love the material, but I recommend sizing up if you like a
+                loose fit." - Sarah M.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div class="related-items col-md-12">
+          <h3 class="h3">You May Also Like:</h3>
+          <div class="related-products">
+            <div class="product-item">
+              <a href="#">
+                <img src="polo-shirt.jpg" alt="Classic Fit Polo Shirt" />
+                <h4>Classic Fit Polo Shirt</h4>
+                <p class="price">$35.99</p>
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <img src="hoodie.jpg" alt="Organic Cotton Hoodie" />
+                <h4>Organic Cotton Hoodie</h4>
+                <p class="price">$49.99</p>
+              </a>
+            </div>
+            <div class="product-item">
+              <a href="#">
+                <img src="sweatpants.jpg" alt="Relaxed Fit Sweatpants" />
+                <h4>Relaxed Fit Sweatpants</h4>
+                <p class="price">$29.99</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+                <h3 class="h3">Frequently Asked Questions:</h3>
+                <p><strong>What size should I choose?</strong> We recommend checking the size chart or sizing up if you prefer a loose fit.</p>
+                <p><strong>Is the fabric eco-friendly?</strong> Yes! Our cotton is 100% organic and sustainably sourced.</p>
+                <p><strong>How do I wash this t-shirt?</strong> Machine wash cold, tumble dry low.</p>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>

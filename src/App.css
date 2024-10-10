@@ -541,13 +541,75 @@ input {
 /* buy */
 
 
+/* faq */
+#faq {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #faq h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #faq .faq-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  #faq .faq-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #faq .faq-item:last-child {
+    border-bottom: none;
+  }
+  
+  #faq .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background: #f9f9f9;
+    transition: background 0.3s;
+  }
+  
+  #faq .faq-question:hover {
+    background: #f1f1f1;
+  }
+  
+  #faq .faq-answer {
+    padding: 15px;
+    background: #fff;
+    animation: fadeIn 0.3s ease;
+  }
+  
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #faq h2 {
+    margin: 0;
+  }
+  
+/* faq */
+
 
 
 
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(90deg, #2c3e50, #4ca1af);
+    /* background: linear-gradient(90deg, #2c3e50, #4ca1af); */
+    background:  #333;
     color: #ecf0f1;
     text-align: center;
     padding: 20px 0;
@@ -559,7 +621,7 @@ footer p {
 }
 
 footer a {
-    color: #f39c12;
+    color: red;
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s;

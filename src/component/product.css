@@ -1,0 +1,242 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+#product a {
+    text-decoration: none;
+    color: inherit;
+}
+#product ul {
+    list-style: none;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#product h1 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+#product h2 {
+    font-size: 20px;
+    color: #444;
+    margin-top: 30px;
+}
+
+/* Product Images */
+#product .product-images img {
+    width: 80px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#product .product-images-overview img:hover {
+    transform: scale(1.1);
+}
+
+#product .product-images .product-image {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Discriptions, Price and Ratings */
+#product .price {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+#product .old-price {
+    font-size: 18px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 15px;
+}
+
+#product .rating {
+    color: #f4c150;
+    font-size: 18px;
+}
+
+/* Description */
+#product .description p, .description ul {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666;
+}
+
+#product .description ul {
+    padding-left: 20px;
+}
+
+/* Options Section */
+#product .options {
+    margin: 20px 0;
+}
+#product .options label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+#product .options select, .options button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+#product .options select:hover, .options button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Call to Action Buttons */
+#product .add-to-cart, .buy-now, .wishlist {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#product .add-to-cart {
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+    font-weight: 600;
+}
+#product .add-to-cart:hover {
+    background-color: transparent;
+    border: 1px solid red;
+}
+#product .buy-now {
+    background-color: red;
+    font-weight: 600;
+    color: #eee;
+}
+#product .buy-now:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Reviews Section */
+#product .reviews {
+    margin-top: 40px;
+}
+#product .h3  {
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+#product .review-item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+#product .review-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+#product .review-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Related Products */
+#product .related-items {
+    margin-top: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+#product .related-products {
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+#product .product-item {
+    background: #fff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px; 
+    width: 180px; 
+    transition: transform 0.2s ease; 
+}
+
+#product .product-item img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+}
+
+#product .product-item h4 {
+    font-size: 1.1rem; 
+    color: #333; 
+    margin: 10px 0 5px; 
+}
+
+#product .price {
+    font-size: 1rem; 
+    color: #28a745; 
+}
+
+#product .product-item:hover {
+    transform: translateY(-5px); 
+}
+
+
+/* FAQ Section */
+#product .faq {
+    margin-top: 40px;
+}
+#product .faq h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+#product .faq p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+

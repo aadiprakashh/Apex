@@ -8,7 +8,7 @@ import FAQs from "../src/component/Faq";
 import Buy from "../src/component/Buy";
 import Login from "../src/component/Login";
 import Footer from "../src/component/Footer";
-
+import './App.css'
 function App() {
   return (
     <div className="app">
