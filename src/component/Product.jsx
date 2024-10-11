@@ -1,11 +1,12 @@
 import { useLocation } from "react-router-dom";
 import '../component/product.css';
-export default function Product() {
+import Select from "./Select";
+export default function Product({ onAddToCart }) {
   const location = useLocation();
   const { product } = location.state || {}; // Get the product from state
 
   if (!product) {
-    return <div>No product data available!</div>;
+    return <Select/>;
   }
 
 return (
@@ -29,9 +30,9 @@ return (
       <div className="product-description col-md-6">
         {/* <!-- Price and Rating --> */}
         <h1>{product.title}</h1>
-        <div className="price">
+        <div className="product-price">
           ${product.price}
-          <span className="old-price">$39.99</span>
+          <p className="old-price">$39.99</p>
         </div>
         <div className="rating">⭐⭐⭐⭐☆ (4.5/5) - 234 Reviews</div>
 
@@ -91,7 +92,7 @@ return (
         </div>
 
         <div className="button-group d-flex gap-3">
-          <button className="add-to-cart">Add to Cart</button>
+          <button id="buy-btn"  onClick={onAddToCart}>Add to Cart</button>
           <button className="buy-now">Buy Now</button>
           {/* <!-- <button className="wishlist">Add to Wishlist</button> --> */}
         </div>
@@ -128,21 +129,21 @@ return (
             <a href="#">
               <img src="polo-shirt.jpg" alt="classNameic Fit Polo Shirt" />
               <h4>classNameic Fit Polo Shirt</h4>
-              <p className="price">$35.99</p>
+              <p className="related-price">$35.99</p>
             </a>
           </div>
           <div className="product-item">
             <a href="#">
               <img src="hoodie.jpg" alt="Organic Cotton Hoodie" />
               <h4>Organic Cotton Hoodie</h4>
-              <p className="price">$49.99</p>
+              <p className="related-price">$49.99</p>
             </a>
           </div>
           <div className="product-item">
             <a href="#">
               <img src="sweatpants.jpg" alt="Relaxed Fit Sweatpants" />
               <h4>Relaxed Fit Sweatpants</h4>
-              <p className="price">$29.99</p>
+              <p className="related-price">$29.99</p>
             </a>
           </div>
         </div>

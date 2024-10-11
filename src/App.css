@@ -37,86 +37,59 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* Change to space-between for better alignment */
     padding: 20px;
-    /* Add padding for better spacing */
     background-color: #fff;
-    /* Optional: Add a background color to the menubar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Optional: Add shadow for depth */
 }
 
 .logo {
     width: 150px;
-    /* Set the width of the logo */
 }
 
 .menu {
     display: flex;
     gap: 50px;
-    /* Space between menu items */
     align-items: center;
-    /* Center items vertically */
 }
 
-/* Link styles */
 .menu a {
     text-decoration: none;
-    /* Remove underline */
     font-size: 1.17rem;
-    /* Font size for menu items */
     color: #333;
-    /* Default color for links */
     position: relative;
-    /* Position for the border effect */
     /* padding: 10px 0; */
-    /* Add vertical padding for better click area */
 }
 
-/* Active link style */
 .menu a.active {
     border-bottom: 2px solid red;
-    /* Underline for active link */
     color: red;
-    /* Change color for active link (optional) */
 }
 
-/* Hover effect */
 .menu a:hover {
     color: red;
-    /* Change color on hover */
     border-bottom: 2px solid red;
-    /* Add underline on hover */
 }
 
-/* Search input styles */
 .menubar .search {
     padding: 10px;
     border-radius: 10px;
     outline: none;
     width: 300px;
-    /* Width of the search input */
+    caret-color: black;
+    color: #333;
     background-color: transparent;
-    /* Background color of the input */
     border: 1px solid #333;
-    /* Border color */
 }
 
-/* Placeholder styles */
 #menubar input::placeholder {
     padding-left: 10px;
-    /* Add padding to the left of placeholder text */
 }
 
-/* Cart styles */
 .cart {
     width: 200px;
-    /* Width of the cart section */
     display: flex;
     align-items: center;
-    /* Center items vertically */
     justify-content: space-evenly;
-    /* Space items evenly */
 }
 
 .bi {
@@ -130,29 +103,17 @@ a {
 
 .number {
     color: white;
-    /* Background for the number */
     position: relative;
-    /* Relative positioning */
     top: -30px;
-    /* Move number above the cart icon */
     left: 35%;
-    /* Center horizontally */
     transform: translateX(-50%);
-    /* Adjust centering */
     background-color: red;
-    /* Background color for notification */
     border-radius: 50%;
-    /* Circle shape */
     padding: 1px 6px;
-    /* Padding for better appearance */
     font-weight: 800;
-    /* Bold font */
     display: flex;
-    /* Flexbox for centering */
     align-items: center;
-    /* Center items vertically */
     justify-content: center;
-    /* Center items horizontally */
 }
 
 .intro {
@@ -166,7 +127,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: start;
-    /* gap: 10px; */
 }
 
 
@@ -222,54 +182,64 @@ a {
 
 
 #shop {
-    /* background: var(--bla); */
     width: 100%;
     height: auto;
 }
 
-
-aside {
-    width: 180px;
-    max-width: 250px;
-    height: auto;
+.sidebar {
+    width: 250px;
+    max-width: 300px;
+    background-color: #f8f8f8;
     padding: 20px;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    border-right: 1px solid;
-    /* background-color: aliceblue; */
-    /* color: white; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
-aside h4 {
-    width: 100%;
-    text-align: center;
+.sidebar h2 {
+    font-size: 18px;
+    color: #333;
 }
 
-#box #range {
-    width: 100px;
-}
-
-#box p {
+.sidebar h3{
     border-bottom: 1px solid;
-    padding: 5px;
-    font-weight: 600;
+    padding-bottom: 10px;
 }
 
-#box input,
-span {
-    position: relative;
-    top: 10px;
-    left: 5%;
-    padding: 2%;
+.filter-title {
+    font-size: 16px;
+    color: #555;
 }
 
-input {
-    border: none;
-    outline: none;
+/* Filter options */
+.filter-group {
+    margin-bottom: 20px;
 }
 
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.price-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-range input[type="range"] {
+    width: 100%;
+    
+}
+.sidebar input::-web{
+    background: white;
+}
+.sidebar input[type="checkbox"] {
+    margin-right: 3px;
+}
+
+.sidebar .rating-stars input {
+    margin-right: 5px;
+}
 #shop-main {
     display: flex;
     flex-direction: column;
@@ -309,7 +279,8 @@ input {
 
 .product-list {
     display: flex;
-    gap: 20px;
+    gap: 60px;
+    /* justify-content: space-evenly; */
     align-items: start;
     flex-wrap: wrap;
 }
@@ -341,10 +312,11 @@ input {
 }
 #list h4{
     color: #333;
+    font-size: 1.5rem;
 }
-#list h5 {
-    font-weight: 800;
+#list h3 {
     color: green;
+    font-size: 2.1rem;
 }
 
 #list #image {
@@ -365,11 +337,12 @@ input {
     background-color: red;
     padding: 10px;
     border: none;
-    border-radius: 0 10px;
+    /* border-radius: 0 10px; */
     font-weight: 600;
 }
 #buy-btn{
     border: 1px solid red;
+    color: red;
     background: transparent;
 }
 #buy-btn > a{
@@ -434,7 +407,6 @@ input {
 }
 
 
-/* Minimalist styles for Buy page with modern design */
 #buy {
     padding: 20px;
     display: flex;
@@ -523,7 +495,6 @@ input {
   
  
   
-  /* Styling the subtotal, discount, and total amounts */
   #buy .tot:last-child {
     font-weight: bold;
     border-top: 2px solid #ccc;
@@ -602,7 +573,52 @@ input {
   
 /* faq */
 
+/* cart.jsx */
+.cart-container {
+ display: grid;
+ place-items:center ;
+}
 
+.cart-container h1 {
+    text-align: center;
+}
+
+.cart-container ul {
+    list-style: none; /* Remove default list styling */
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container li {
+    display: flex;
+    justify-content: space-between; /* Space between item details */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Separator line */
+}
+
+.cart-container .cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-container #checkout-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-container #checkout-button:hover {
+    background-color: #218838;
+}
+
+/* cart.jsx */
 
 
 

@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import '../App.css';
 import Shopbar from "./Shopbar";
 
-export default function Shop() {
+export default function Shop({ onAddToCart }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -41,9 +41,8 @@ export default function Shop() {
     return description;
   };
 
-  // Handle product view (navigate to product page with product details)
   const handleProductView = (product) => {
-    navigate(`/product`, { state: { product } }); // Navigate to product page with the selected product's data
+    navigate(`/product`, { state: { product } });
   };
 
   return (
@@ -77,7 +76,7 @@ export default function Shop() {
                 <img src={product.image} alt={product.title} id="image" />
                 <h4>{product.title}</h4>
                 <span>
-                  <h5 id="price">${product.price}</h5>
+                  <h3 id="price">${product.price}</h3>
                   <i className="bi bi-heart" />
                 </span>
                 <p>{truncateDescription(product.description)}</p>
@@ -85,8 +84,8 @@ export default function Shop() {
                   <button type="button" id="view-btn" onClick={() => handleProductView(product)}>
                     Quick View
                   </button>
-                  <button type="submit" id="buy-btn">
-                    <Link to='/bu'>Add to cart</Link>
+                  <button type="submit" id="buy-btn" onClick={onAddToCart}> 
+                    Add to cart
                   </button>
                 </div>
               </li>

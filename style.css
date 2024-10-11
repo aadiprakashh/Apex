@@ -214,10 +214,7 @@
     margin: 10px 0 5px; 
 }
 
-#product .price {
-    font-size: 1rem; 
-    color: #28a745; 
-}
+
 
 #product .product-item:hover {
     transform: translateY(-5px); 

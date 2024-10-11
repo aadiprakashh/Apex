@@ -2,7 +2,7 @@ import logo from "../assets/logo.svg";
 import "../App.css";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ cartCount }) {
   const location = useLocation();
 
   return (
@@ -14,35 +14,31 @@ export default function Header() {
         </Link>
         <Link
           to="/shop"
-          className={location.pathname === "/shop" ? "active" : ""}
-        >
+          className={location.pathname === "/shop" ? "active" : ""}>
           Shop
         </Link>
         <Link
           to="/product"
-          className={location.pathname === "/product" ? "active" : ""}
-        >
+          className={location.pathname === "/product" ? "active" : ""}>
           Product
         </Link>
         <Link
           to="/category"
-          className={location.pathname === "/category" ? "active" : ""}
-        >
+          className={location.pathname === "/category" ? "active" : ""}>
           Category
         </Link>
         <Link
           to="/faqs"
-          className={location.pathname === "/faqs" ? "active" : ""}
-        >
-          FAQ&apos;s
+          className={location.pathname === "/faqs" ? "active" : ""}>
+          FAQ's
         </Link>
       </div>
 
-      <input type="search" className="search" placeholder="Search entirely" />
+      <input type="search" className="search" placeholder="Search by Product: Name, Category . ." />
       
       <div className="cart">
-        <div className="number">0</div>
-        <Link to="/buy">
+        <div className="number">{cartCount}</div> {/* Show dynamic cart count */}
+        <Link to="/cart">
           <i className="bi bi-cart"></i>
         </Link>
         <Link to="/login">
