@@ -1,41 +1,67 @@
+import { useNavigate } from "react-router-dom";
+import Select from './Select';
+export default function Cart({ cartItems, updateCartItem, removeCartItem }) {
+  const navigate = useNavigate(); // Initialize the navigate function
 
-import Select from "./Select";
+  const calculateTotalPrice = () =>
+    cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
-export default function Cart() {
-  const cart = [
-    // { title: "Item 1", price: 10.99, quantity: 2, image: "path_to_image_1.jpg" },
-    // { title: "Item 2", price: 15.99, quantity: 1, image: "path_to_image_2.jpg" },
-    // { title: "Item 3", price: 7.49, quantity: 3, image: "path_to_image_3.jpg" },
-  ];
+  const handleQuantityChange = (item, delta) => {
+    const newQuantity = item.quantity + delta;
+    if (newQuantity > 0) {
+      updateCartItem(item.id, newQuantity);
+    } else {
+      removeCartItem(item.id); // Remove if quantity becomes 0
+    }
+  };
 
-  const totalPrice = cart.reduce((total, product) => {
-    return total + product.price * product.quantity;
-  }, 0);
-
+  const handleViewProduct = (item) => {
+    navigate(`/product`, { state: { product: item, quantity:item.quantity } }); // Navigate to Product page
+  };
+  const handleBuy = (item) => {
+    navigate('/buy', { state: { product: item, quantity:item.quantity } }); // Navigate to Buy page with product data
+  };
   return (
-    <div className="cart-container">
-      {cart.length === 0 ? (
-        <Select />
+    <div className="cart-container container">
+      <h2>Your Cart</h2>
+      {cartItems.length === 0 ? (
+        <div>
+        <p>Your cart is empty.</p>
+        <Select/>
+        </div>
       ) : (
-        <>
-          <h1>Your Shopping Cart</h1>
-          <ul>
-            {cart.map((product, index) => (
-              <li key={index}>
-                <img src={product.image} alt={product.title} width="50" />
-                <h4>{product.title}</h4>
-                <p>Price: ${product.price.toFixed(2)}</p>
-                <p>Quantity: {product.quantity}</p>
-                <p>Total: ${(product.price * product.quantity).toFixed(2)}</p>
-              </li>
-            ))}
-          </ul>
-          <div className="cart-summary">
-            <p id="total-price">Total: ${totalPrice.toFixed(2)}</p>
-            <button id="checkout-button">Checkout</button>
-          </div>
-        </>
+        <ul className="cart-list">
+          {cartItems.map((item) => (
+            <li key={item.id} className="cart-item">
+              <img src={item.image} alt={item.title} className="cart-item-image" />
+              <div className="cart-item-details">
+                <h4>{item.title}</h4>
+                <div className="card-item-info">
+                <p>Price: ${item.price}</p>
+                <p>Quantity: {item.quantity}</p>
+                <div className="quantity-controls">
+                  <button onClick={() => handleQuantityChange(item, -1)}>-</button>
+                  {/* <i class="bi bi-dash" ></i> */}
+                  <span>{item.quantity}</span>
+                  <button onClick={() => handleQuantityChange(item, 1)}>+</button>
+                  {/* <i class="bi bi-plus" onClick={() => handleQuantityChange(item, 1)}></i> */}
+                </div>
+                <i onClick={() => removeCartItem(item.id)} className="remove-btn">
+                  Remove
+                </i>
+                <button onClick={() => handleViewProduct(item)} className="product-view">
+                  View Product
+                </button>
+                <button onClick={() => handleBuy(item)} className="buy-btn">
+                  Buy
+                </button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       )}
+      <h3>Total: ${calculateTotalPrice().toFixed(2)}</h3>
     </div>
   );
 }

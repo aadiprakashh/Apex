@@ -464,14 +464,15 @@ a {
 }
   #buy .place {
     padding: 15px;
-    background-color: red;
+    /* background-color: red; */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    color: #eee;
+    /* color: #eee; */
   }
-  .place h1{
-    color: white;
-  }
+  
+  /*.place h1{
+     color: white;
+  } */
 
   #buy .tot{
     display: flex;
@@ -575,48 +576,76 @@ a {
 
 /* cart.jsx */
 .cart-container {
- display: grid;
- place-items:center ;
-}
-
-.cart-container h1 {
-    text-align: center;
-}
-
-.cart-container ul {
-    list-style: none; /* Remove default list styling */
-    max-width: 800px;
-    margin: auto;
-    background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.cart-container li {
+    margin: 0 auto;
+  }
+  
+  .cart-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-item {
     display: flex;
-    justify-content: space-between; /* Space between item details */
-    padding: 10px;
-    border-bottom: 1px solid #ddd; /* Separator line */
-}
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding:10px;
 
-.cart-container .cart-summary {
-    margin-top: 20px;
-    text-align: right;
-}
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
 
-.cart-container #checkout-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
+  .card-item-info{
+    display:flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .card-item-info p{
+    font-size: 1.4rem;
+    /* font-weight: 800; */
+    margin-top:15px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-controls button {
+    padding:10px;
     cursor: pointer;
-}
-
-.cart-container #checkout-button:hover {
-    background-color: #218838;
-}
+    text-align: center;
+    background: white;
+    color: black;
+    outline:none;
+  }
+  
+  .remove-btn {
+    padding:10px 15px;
+    color: red;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid red;
+    border-radius: 10px;
+  }
+  .product-view{
+    background: #333;
+    padding:10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
 
 /* cart.jsx */
 
