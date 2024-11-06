@@ -23,6 +23,22 @@ export default function Buy() {
     return formData.firstName && formData.lastName && formData.mobile && formData.email;
   };
 
+  const handleConfirmOrder = () => {
+    const orderDetails = {
+      product: product.title,
+      quantity: product.quantity,
+      price: product.price,
+      orderDate: new Date().toISOString(),
+    };
+    
+    // Store order details in localStorage
+    localStorage.setItem("confirmedOrder", JSON.stringify(orderDetails));
+  
+    // Optionally redirect the user to a success page
+    alert("Order Confirmed! Now switching to seller dashboard.");
+    window.location.href = "http://localhost:3000/order"; // Seller Dashboard
+  };
+
   return (
     <div id="buy" className="container-fluid">
       <div className="row col-md-5">
